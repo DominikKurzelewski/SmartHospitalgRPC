@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option java_package = "com.dominik.smarthospital.BioSensorService";
+
+
+service BioSensorService {
+  //client stream
+  rpc add(stream AddBioSensorRequest) returns (APIResponse) {}
+  //server stream
+  rpc getAll(Empty) returns (stream BioSensorReturn) {}
+}
+message Empty {
+
+}
+
+message AddBioSensorRequest {
+  string type = 1;
+  float value = 2;
+}
+
+message BioSensorReturn {
+  string type = 1;
+  double value = 2;
+}
+
+message APIResponse{
+  string responseMessage = 1;
+  int32 responseCode = 2;
+}

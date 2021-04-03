@@ -1,4 +1,4 @@
-package com.doctorService;
+package com.dominik.smarthospital.DoctorService;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
@@ -27,30 +27,30 @@ public final class DoctorServiceGrpc {
   public static final String SERVICE_NAME = "DoctorService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.doctorService.DoctorServiceOuterClass.LoginRequest,
-      com.doctorService.DoctorServiceOuterClass.APIResponse> getLoginMethod;
+  private static volatile io.grpc.MethodDescriptor<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LoginRequest,
+      com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse> getLoginMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "login",
-      requestType = com.doctorService.DoctorServiceOuterClass.LoginRequest.class,
-      responseType = com.doctorService.DoctorServiceOuterClass.APIResponse.class,
+      requestType = com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LoginRequest.class,
+      responseType = com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.doctorService.DoctorServiceOuterClass.LoginRequest,
-      com.doctorService.DoctorServiceOuterClass.APIResponse> getLoginMethod() {
-    io.grpc.MethodDescriptor<com.doctorService.DoctorServiceOuterClass.LoginRequest, com.doctorService.DoctorServiceOuterClass.APIResponse> getLoginMethod;
+  public static io.grpc.MethodDescriptor<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LoginRequest,
+      com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse> getLoginMethod() {
+    io.grpc.MethodDescriptor<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LoginRequest, com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse> getLoginMethod;
     if ((getLoginMethod = DoctorServiceGrpc.getLoginMethod) == null) {
       synchronized (DoctorServiceGrpc.class) {
         if ((getLoginMethod = DoctorServiceGrpc.getLoginMethod) == null) {
           DoctorServiceGrpc.getLoginMethod = getLoginMethod = 
-              io.grpc.MethodDescriptor.<com.doctorService.DoctorServiceOuterClass.LoginRequest, com.doctorService.DoctorServiceOuterClass.APIResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LoginRequest, com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "DoctorService", "login"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.doctorService.DoctorServiceOuterClass.LoginRequest.getDefaultInstance()))
+                  com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LoginRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.doctorService.DoctorServiceOuterClass.APIResponse.getDefaultInstance()))
+                  com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new DoctorServiceMethodDescriptorSupplier("login"))
                   .build();
           }
@@ -59,30 +59,30 @@ public final class DoctorServiceGrpc {
      return getLoginMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.doctorService.DoctorServiceOuterClass.Empty,
-      com.doctorService.DoctorServiceOuterClass.APIResponse> getLogoutMethod;
+  private static volatile io.grpc.MethodDescriptor<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LogoutRequest,
+      com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse> getLogoutMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "logout",
-      requestType = com.doctorService.DoctorServiceOuterClass.Empty.class,
-      responseType = com.doctorService.DoctorServiceOuterClass.APIResponse.class,
+      requestType = com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LogoutRequest.class,
+      responseType = com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.doctorService.DoctorServiceOuterClass.Empty,
-      com.doctorService.DoctorServiceOuterClass.APIResponse> getLogoutMethod() {
-    io.grpc.MethodDescriptor<com.doctorService.DoctorServiceOuterClass.Empty, com.doctorService.DoctorServiceOuterClass.APIResponse> getLogoutMethod;
+  public static io.grpc.MethodDescriptor<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LogoutRequest,
+      com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse> getLogoutMethod() {
+    io.grpc.MethodDescriptor<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LogoutRequest, com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse> getLogoutMethod;
     if ((getLogoutMethod = DoctorServiceGrpc.getLogoutMethod) == null) {
       synchronized (DoctorServiceGrpc.class) {
         if ((getLogoutMethod = DoctorServiceGrpc.getLogoutMethod) == null) {
           DoctorServiceGrpc.getLogoutMethod = getLogoutMethod = 
-              io.grpc.MethodDescriptor.<com.doctorService.DoctorServiceOuterClass.Empty, com.doctorService.DoctorServiceOuterClass.APIResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LogoutRequest, com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "DoctorService", "logout"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.doctorService.DoctorServiceOuterClass.Empty.getDefaultInstance()))
+                  com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LogoutRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.doctorService.DoctorServiceOuterClass.APIResponse.getDefaultInstance()))
+                  com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new DoctorServiceMethodDescriptorSupplier("logout"))
                   .build();
           }
@@ -119,16 +119,22 @@ public final class DoctorServiceGrpc {
   public static abstract class DoctorServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     *unary
+     * </pre>
      */
-    public void login(com.doctorService.DoctorServiceOuterClass.LoginRequest request,
-        io.grpc.stub.StreamObserver<com.doctorService.DoctorServiceOuterClass.APIResponse> responseObserver) {
+    public void login(com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LoginRequest request,
+        io.grpc.stub.StreamObserver<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getLoginMethod(), responseObserver);
     }
 
     /**
+     * <pre>
+     *unary
+     * </pre>
      */
-    public void logout(com.doctorService.DoctorServiceOuterClass.Empty request,
-        io.grpc.stub.StreamObserver<com.doctorService.DoctorServiceOuterClass.APIResponse> responseObserver) {
+    public void logout(com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LogoutRequest request,
+        io.grpc.stub.StreamObserver<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getLogoutMethod(), responseObserver);
     }
 
@@ -138,15 +144,15 @@ public final class DoctorServiceGrpc {
             getLoginMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.doctorService.DoctorServiceOuterClass.LoginRequest,
-                com.doctorService.DoctorServiceOuterClass.APIResponse>(
+                com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LoginRequest,
+                com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse>(
                   this, METHODID_LOGIN)))
           .addMethod(
             getLogoutMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.doctorService.DoctorServiceOuterClass.Empty,
-                com.doctorService.DoctorServiceOuterClass.APIResponse>(
+                com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LogoutRequest,
+                com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse>(
                   this, METHODID_LOGOUT)))
           .build();
     }
@@ -171,17 +177,23 @@ public final class DoctorServiceGrpc {
     }
 
     /**
+     * <pre>
+     *unary
+     * </pre>
      */
-    public void login(com.doctorService.DoctorServiceOuterClass.LoginRequest request,
-        io.grpc.stub.StreamObserver<com.doctorService.DoctorServiceOuterClass.APIResponse> responseObserver) {
+    public void login(com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LoginRequest request,
+        io.grpc.stub.StreamObserver<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
+     * <pre>
+     *unary
+     * </pre>
      */
-    public void logout(com.doctorService.DoctorServiceOuterClass.Empty request,
-        io.grpc.stub.StreamObserver<com.doctorService.DoctorServiceOuterClass.APIResponse> responseObserver) {
+    public void logout(com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LogoutRequest request,
+        io.grpc.stub.StreamObserver<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getLogoutMethod(), getCallOptions()), request, responseObserver);
     }
@@ -206,15 +218,21 @@ public final class DoctorServiceGrpc {
     }
 
     /**
+     * <pre>
+     *unary
+     * </pre>
      */
-    public com.doctorService.DoctorServiceOuterClass.APIResponse login(com.doctorService.DoctorServiceOuterClass.LoginRequest request) {
+    public com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse login(com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LoginRequest request) {
       return blockingUnaryCall(
           getChannel(), getLoginMethod(), getCallOptions(), request);
     }
 
     /**
+     * <pre>
+     *unary
+     * </pre>
      */
-    public com.doctorService.DoctorServiceOuterClass.APIResponse logout(com.doctorService.DoctorServiceOuterClass.Empty request) {
+    public com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse logout(com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LogoutRequest request) {
       return blockingUnaryCall(
           getChannel(), getLogoutMethod(), getCallOptions(), request);
     }
@@ -239,17 +257,23 @@ public final class DoctorServiceGrpc {
     }
 
     /**
+     * <pre>
+     *unary
+     * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.doctorService.DoctorServiceOuterClass.APIResponse> login(
-        com.doctorService.DoctorServiceOuterClass.LoginRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse> login(
+        com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LoginRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request);
     }
 
     /**
+     * <pre>
+     *unary
+     * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.doctorService.DoctorServiceOuterClass.APIResponse> logout(
-        com.doctorService.DoctorServiceOuterClass.Empty request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse> logout(
+        com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LogoutRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getLogoutMethod(), getCallOptions()), request);
     }
@@ -276,12 +300,12 @@ public final class DoctorServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_LOGIN:
-          serviceImpl.login((com.doctorService.DoctorServiceOuterClass.LoginRequest) request,
-              (io.grpc.stub.StreamObserver<com.doctorService.DoctorServiceOuterClass.APIResponse>) responseObserver);
+          serviceImpl.login((com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LoginRequest) request,
+              (io.grpc.stub.StreamObserver<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse>) responseObserver);
           break;
         case METHODID_LOGOUT:
-          serviceImpl.logout((com.doctorService.DoctorServiceOuterClass.Empty) request,
-              (io.grpc.stub.StreamObserver<com.doctorService.DoctorServiceOuterClass.APIResponse>) responseObserver);
+          serviceImpl.logout((com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.LogoutRequest) request,
+              (io.grpc.stub.StreamObserver<com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.APIResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -305,7 +329,7 @@ public final class DoctorServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.doctorService.DoctorServiceOuterClass.getDescriptor();
+      return com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass.getDescriptor();
     }
 
     @java.lang.Override
