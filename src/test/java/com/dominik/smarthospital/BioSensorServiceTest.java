@@ -2,16 +2,11 @@ package com.dominik.smarthospital;
 
 import com.dominik.smarthospital.BioSensorService.BioSensorServiceGrpc;
 import com.dominik.smarthospital.BioSensorService.BioSensorServiceOuterClass;
-import com.dominik.smarthospital.DoctorService.DoctorServiceGrpc;
-import com.dominik.smarthospital.DoctorService.DoctorServiceOuterClass;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
 import org.junit.jupiter.api.Test;
-
 import java.util.Iterator;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BioSensorServiceTest {
@@ -57,17 +52,16 @@ public class BioSensorServiceTest {
         );
         Thread.sleep(1000);
         requestStreamObserver.onCompleted();
-
+        channel.shutdown();
 
         //Then
         /* Thread.sleep must be here because this is asynchronous action */
-        Thread.sleep(15000);
-        channel.shutdown();
+        Thread.sleep(5000);
         assertTrue(status != 0);
     }
 
     @Test
-    void BioSensorServiceGetAllTest() throws InterruptedException {
+    void BioSensorServiceGetAllTest() {
         //Given
         ManagedChannel channel = ManagedChannelBuilder
                 .forAddress("localhost", PORT)
@@ -84,7 +78,6 @@ public class BioSensorServiceTest {
             System.out.println("Received message: " + bioSensor.toString());
             counter++;
         }
-        Thread.sleep(15000);
         channel.shutdown();
 
         //Then

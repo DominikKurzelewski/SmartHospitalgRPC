@@ -14,7 +14,7 @@ class DoctorServiceTest {
 
     //Unary login test
     @Test
-    void DoctorServiceLoginFailTest() throws InterruptedException {
+    void DoctorServiceLoginFailTest() {
         //Given
         ManagedChannel channel = ManagedChannelBuilder
                 .forAddress("localhost", PORT)
@@ -26,15 +26,13 @@ class DoctorServiceTest {
 
         //When
         DoctorServiceOuterClass.APIResponse response = stub.login(req);
-
-        //Then
-        Thread.sleep(15000);
         channel.shutdown();
+        //Then
         assertEquals(0, response.getResponseCode(), "Should be 0, because of bad data.");
     }
 
     @Test
-    void DoctorServiceLoginGoodTest() throws InterruptedException {
+    void DoctorServiceLoginGoodTest() {
         //Given
         ManagedChannel channel = ManagedChannelBuilder
                 .forAddress("localhost", PORT)
@@ -46,16 +44,14 @@ class DoctorServiceTest {
 
         //When
         DoctorServiceOuterClass.APIResponse response = stub.login(req);
-
+        channel.shutdown();
 
         //Then
-        Thread.sleep(15000);
-        channel.shutdown();
         assertEquals(1, response.getResponseCode(), "Should be 1 because of good data passed.");
     }
 
     @Test
-    void DoctorServiceLogoutTest() throws InterruptedException {
+    void DoctorServiceLogoutTest() {
         //Given
         ManagedChannel channel = ManagedChannelBuilder
                 .forAddress("localhost", PORT)
@@ -66,10 +62,9 @@ class DoctorServiceTest {
 
         //When
         DoctorServiceOuterClass.APIResponse response = stub.logout(req);
+        channel.shutdown();
 
         //Then
-        Thread.sleep(15000);
-        channel.shutdown();
         assertEquals(1, response.getResponseCode(), "Should be 1 because everytime all will be ok.");
     }
 
