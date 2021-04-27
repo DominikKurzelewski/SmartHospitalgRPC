@@ -50,13 +50,13 @@ public class BioSensorServiceTest {
         requestStreamObserver.onNext(BioSensorServiceOuterClass.AddBioSensorRequest.newBuilder()
                 .setType("temperature").setValue(36.52f).build()
         );
-        Thread.sleep(1000);
+        Thread.sleep(15000);
         requestStreamObserver.onCompleted();
         channel.shutdown();
 
         //Then
         /* Thread.sleep must be here because this is asynchronous action */
-        Thread.sleep(5000);
+        Thread.sleep(15000);
         assertTrue(status != 0);
     }
 

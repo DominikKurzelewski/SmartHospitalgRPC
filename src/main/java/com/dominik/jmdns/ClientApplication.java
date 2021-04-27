@@ -6,7 +6,6 @@ import javax.jmdns.JmDNS;
 import javax.jmdns.ServiceEvent;
 import javax.jmdns.ServiceInfo;
 import javax.jmdns.ServiceListener;
-import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -46,6 +45,7 @@ public class ClientApplication {
             System.out.println("Service resolved: " + event.getInfo());
         }
     }
+
     public static void main(String[] args) throws InterruptedException {
         try {
             // Create a JmDNS instance

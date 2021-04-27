@@ -67,7 +67,7 @@ class PatientServiceTest {
 
 
         //then
-        Thread.sleep(5000);
+        Thread.sleep(15000);
         channel.shutdown();
         assertTrue(counter > 0);
     }
